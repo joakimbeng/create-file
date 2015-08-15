@@ -1,0 +1,28 @@
+{
+  "name": "create-file",
+  "version": "0.1.0",
+  "description": "Write to a file only if it does not exist",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "xo && tape 'test/**/*.js'"
+  },
+  "keywords": [
+    "file",
+    "writefile",
+    "create"
+  ],
+  "author": "Joakim Carlstein <joakim@klei.se>",
+  "repository": "joakimbeng/create-file",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.2.0",
+    "xo": "^0.6.0"
+  },
+  "dependencies": {
+    "is-existing-file": "^1.0.0",
+    "safe-write-file": "^1.0.1"
+  },
+  "xo": {
+    "space": true
+  }
+}
