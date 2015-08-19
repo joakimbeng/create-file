@@ -1,6 +1,6 @@
 {
   "name": "create-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Write to a file only if it does not exist",
   "main": "src/index.js",
   "scripts": {
