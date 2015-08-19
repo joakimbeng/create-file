@@ -1,12 +1,11 @@
 'use strict';
 var writeFile = require('safe-write-file');
-var isExistingFile = require('is-existing-file');
 
 module.exports = function createFile(filename, contents, cb) {
-  isExistingFile(filename, function (yes) {
-    if (yes) {
+  writeFile(filename, contents, {encoding: 'utf8', flag: 'wx'}, function (err) {
+    if (!err || err.code === 'EEXIST') {
       return cb();
     }
-    writeFile(filename, contents, 'utf8', cb);
+    cb(err);
   });
 };
